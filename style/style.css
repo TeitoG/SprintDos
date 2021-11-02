@@ -1,5 +1,8 @@
 body {
     font-family: Roboto;
+    background-image: url(/images/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 input[type=number]::-webkit-inner-spin-button,

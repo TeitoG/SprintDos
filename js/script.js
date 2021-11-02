@@ -17,6 +17,69 @@ function init() {
     var nueve = document.getElementById('nueve');
     var cero = document.getElementById('cero');
 
+
+    uno.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "1";
+    }
+    dos.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "2";
+    }
+    tres.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "3";
+    }
+    cuatro.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "4";
+    }
+    cinco.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "5";
+    }
+    seis.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "6";
+    }
+    siete.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "7";
+    }
+    ocho.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "8";
+    }
+    nueve.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "9";
+    }
+    cero.onclick = function(e){
+        resultado.TextContent = resultado.TextContent  + "0";
+    }
+    reset.onclick = function(e){
+        resetear();
+    }
+
+
+    
+    suma.onclick = function(e){
+        operandoa = resultado.textContent;
+        operacion = "+";
+        limpiar();
+    }
+    resta.onclick = function(e){
+        operandoa = resultado.textContent;
+        operacion = "-";
+        limpiar();
+    }
+    multiplicacion.onclick = function(e){
+        operandoa = resultado.textContent;
+        operacion = "*";
+        limpiar();
+    }
+    division.onclick = function(e){
+        operandoa = resultado.textContent;
+        operacion = "/";
+        limpiar();
+    }
+    igual.onclick = function(e){
+        operandob = resultado.textContent;
+        resolver();
+    }
+
+
 let form = document.getElementById('form');
 
 form.addEventListener('submit', formSumbit);
@@ -112,9 +175,8 @@ division.onclick = function (e) {
     total = "/";
     limpiar();
 }
+
 igual.onclick = function (e) {
     operandoDos = resultado.textContent;
     resolver();
 }
-}
-

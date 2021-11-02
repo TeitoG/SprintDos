@@ -179,4 +179,7 @@ division.onclick = function (e) {
 igual.onclick = function (e) {
     operandoDos = resultado.textContent;
     resolver();
+
+
+    
 }

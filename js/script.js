@@ -1,4 +1,8 @@
 function init(){
+
+    
+
+
     var resultado = document.getElementById('resultado');
     var reset = document.getElementById('reset');
     var suma = document.getElementById('suma');
@@ -16,7 +20,18 @@ function init(){
     var ocho = document.getElementById('ocho');
     var nueve = document.getElementById('nueve');
     var cero = document.getElementById('cero');
+
+
+
   }
+
+
+
+
+
+
+
+  
 uno.onclick = function(e){
     resultado.textContent = resultado.textContent  + "1";
 }
@@ -74,3 +89,4 @@ igual.onclick = function(e){
     operandob = resultado.textContent;
     resolver();
 }
+

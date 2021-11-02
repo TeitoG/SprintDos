@@ -37,7 +37,7 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 10px;
 }
 
-.inputResult {
+#resultado {
     position: absolute;
     width: 261px;
     height: 33px;

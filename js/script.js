@@ -4,8 +4,10 @@ function init() {
     var suma = document.getElementById('suma');
     var resta = document.getElementById('resta');
     var multiplicacion = document.getElementById('multiplicacion');
+    var porcentaje = document.getElementById('porcentaje');
     var division = document.getElementById('division');
     var igual = document.getElementById('igual');
+    var punto = document.getElementById('punto');
     var uno = document.getElementById('uno');
     var dos = document.getElementById('dos');
     var tres = document.getElementById('tres');
@@ -17,43 +19,6 @@ function init() {
     var nueve = document.getElementById('nueve');
     var cero = document.getElementById('cero');
 
-
-    uno.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "1";
-    }
-    dos.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "2";
-    }
-    tres.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "3";
-    }
-    cuatro.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "4";
-    }
-    cinco.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "5";
-    }
-    seis.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "6";
-    }
-    siete.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "7";
-    }
-    ocho.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "8";
-    }
-    nueve.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "9";
-    }
-    cero.onclick = function(e){
-        resultado.TextContent = resultado.TextContent  + "0";
-    }
-    reset.onclick = function(e){
-        resetear();
-    }
-
-
-    
     suma.onclick = function(e){
         operandoa = resultado.textContent;
         operacion = "+";
@@ -88,6 +53,9 @@ function formSumbit(e) {
     e.preventDefault();
 }
 //Eventos onclick
+punto.onclick = function (e){
+    resultado.textContent = resultado.textContent + ".";
+}
 uno.onclick = function (e) {
     resultado.textContent = resultado.textContent + "1";
 }
@@ -151,6 +119,10 @@ function limpiar(){
         res = parseFloat(operandoUno
     ) / parseFloat(operandoDos);
         break;
+      case "%":
+          res = (parseFloat(operandoUno) / 100)*parseFloat(operandoDos);
+        break;
+            
     }
     resetear();
     resultado.textContent = res;
@@ -175,8 +147,14 @@ division.onclick = function (e) {
     total = "/";
     limpiar();
 }
+porcentaje.onclick = function (e) {
+    operandoUno = resultado.textContent;
+    total = "%";
+    limpiar();
+}
 
 igual.onclick = function (e) {
     operandoDos = resultado.textContent;
     resolver();
+}
 }

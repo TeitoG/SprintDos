@@ -1,3 +1,10 @@
+let form = document.getElementById('form');
+
+form.addEventListener('submit',formSumbit);
+
+function formSumbit(e){
+    e.preventDefault();
+}
 function init(){
 
     
@@ -25,13 +32,6 @@ function init(){
 
   }
 
-
-
-
-
-
-
-  
 uno.onclick = function(e){
     resultado.textContent = resultado.textContent  + "1";
 }

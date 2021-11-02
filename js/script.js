@@ -17,7 +17,7 @@ function init() {
     var nueve = document.getElementById('nueve');
     var cero = document.getElementById('cero');
 
-<<<<<<< HEAD
+
     uno.onclick = function(e){
         resultado.TextContent = resultado.TextContent  + "1";
     }
@@ -79,7 +79,7 @@ function init() {
         resolver();
     }
 
-=======
+
 let form = document.getElementById('form');
 
 form.addEventListener('submit', formSumbit);
@@ -171,12 +171,8 @@ division.onclick = function (e) {
     operacion = "/";
     limpiar();
 }
+
 igual.onclick = function (e) {
     operandob = resultado.textContent;
     resolver();
->>>>>>> 899b753b9cb26f49e6316bc0a76a80b2b31fca29
 }
-}
-
-
-

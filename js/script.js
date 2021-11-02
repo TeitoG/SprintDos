@@ -65,51 +65,55 @@ function limpiar(){
   }
   function resetear(){
     resultado.textContent = "";
-    operandoa = 0;
-    operandob = 0;
-    operacion = "";
+    operandoUno = 0;
+    operandoDos = 0;
+    total = "";
   }
   function resolver(){
     var res = 0;
-    switch(operacion){
+    switch(total){
       case "+":
-        res = parseFloat(operandoa) + parseFloat(operandob);
+        res = parseFloat(operandoUno
+    ) + parseFloat(operandoDos);
         break;
       case "-":
-          res = parseFloat(operandoa) - parseFloat(operandob);
+          res = parseFloat(operandoUno
+    ) - parseFloat(operandoDos);
           break;
       case "*":
-        res = parseFloat(operandoa) * parseFloat(operandob);
+        res = parseFloat(operandoUno
+    ) * parseFloat(operandoDos);
         break;
       case "/":
-        res = parseFloat(operandoa) / parseFloat(operandob);
+        res = parseFloat(operandoUno
+    ) / parseFloat(operandoDos);
         break;
     }
     resetear();
     resultado.textContent = res;
   }
 suma.onclick = function (e) {
-    operandoa = resultado.textContent;
-    operacion = "+";
+    operandoUno = resultado.textContent;
+    total = "+";
     limpiar();
 }
 resta.onclick = function (e) {
-    operandoa = resultado.textContent;
-    operacion = "-";
+    operandoUno = resultado.textContent;
+    total = "-";
     limpiar();
 }
 multiplicacion.onclick = function (e) {
-    operandoa = resultado.textContent;
-    operacion = "*";
+    operandoUno = resultado.textContent;
+    total = "*";
     limpiar();
 }
 division.onclick = function (e) {
-    operandoa = resultado.textContent;
-    operacion = "/";
+    operandoUno = resultado.textContent;
+    total = "/";
     limpiar();
 }
 igual.onclick = function (e) {
-    operandob = resultado.textContent;
+    operandoDos = resultado.textContent;
     resolver();
 }
 }

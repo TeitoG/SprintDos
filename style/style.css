@@ -1,0 +1,582 @@
+body {
+    font-family: Roboto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+.calculadora {
+    position: absolute;
+    width: 360px;
+    height: 640px;
+    left: 300px;
+    top: 64px;
+    border-style: solid;
+    background: linear-gradient(180deg, #FEFEFE 0%, #E9ECEE 37.34%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    box-shadow: 13px 13px 10px #E6E5E5;
+    border-radius: 20px;
+}
+
+.caja {
+    position: absolute;
+    width: 319px;
+    height: 110px;
+    left: 21px;
+    top: 65px;
+
+    /* Black */
+
+    background: #000000;
+    box-shadow: 4px 4px 4px #D5D8DC, -4px -4px 4px #FFFEFE;
+    border-radius: 10px;
+}
+
+.inputResult {
+    position: absolute;
+    width: 261px;
+    height: 33px;
+    left: 25px;
+    top: 35px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+    /* identical to box height */
+
+    text-align: right;
+    letter-spacing: 0.15em;
+
+    color: #3F474E;
+    background-color: #A5A5A5;
+    border: 0;
+    outline: none;
+}
+
+.result {
+    position: absolute;
+    width: 293px;
+    height: 87px;
+    left: 13px;
+    top: 12px;
+
+    background: #A5A5A5;
+}
+
+.btnC {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 20px;
+    top: 220px;
+
+    background: #FE9505;
+    box-shadow: 4px 4px 4px #DEBF81, -4px -4px 4px #FFFFFF;
+    border-radius: 30px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #FFFFFF;
+    border: 0;
+}
+
+.btnSumDivRes {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 104px;
+    top: 220px;
+
+    background: #F5F0E3;
+    box-shadow: 4px 4px 4px #dad0ba, -4px -4px 4px #FDFDFD;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+
+}
+
+.btnPorcentaje {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 188px;
+    top: 220px;
+
+    background: #F6F0E4;
+    box-shadow: 4px 4px 4px #E0DBCE, -4px -4px 4px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnDiv {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 272px;
+    top: 220px;
+
+    background: #D5D6E9;
+    box-shadow: 4px 4px 4px #D6C9DF, -4px -4px 4px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #111C81;
+}
+
+.btnMult {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 272px;
+    top: 304px;
+
+    background: #D5D6E9;
+    box-shadow: 4px 4px 5px #D6C9DF, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #111C81;
+}
+
+.btnRest {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 272px;
+    top: 388px;
+
+    background: #D5D6E9;
+    box-shadow: 4px 4px 5px #D6C9DF, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #111C81;
+}
+
+.btnPunto {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 104px;
+    top: 556px;
+
+    background: #F4F5F6;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #111C81;
+}
+
+.btnBorrar {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 188px;
+    top: 556px;
+
+    background: #E7E9EC;
+    box-shadow: 4px 4px 5px #D4D5D7, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+}
+
+.btnIgual {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 272px;
+    top: 556px;
+
+    background: #2D41F5;
+    box-shadow: 4px 4px 5px #6976E9, -4px -4px 3px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: white;
+}
+
+.btnSum {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 272px;
+    top: 472px;
+
+    background: #D5D6E9;
+    box-shadow: 4px 4px 5px #D6C9DF, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #111C81;
+}
+
+.btnCero {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 20px;
+    top: 556px;
+
+    background: #F1F3F5;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnUno {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 20px;
+    top: 472px;
+
+    background: #F3F5F7;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnDos {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 104px;
+    top: 472px;
+
+    background: #F4F5F7;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnTres {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 188px;
+    top: 472px;
+
+    background: #F4F5F7;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnCuatro {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 20px;
+    top: 388px;
+
+    background: #F3F4F6;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnCinco {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 104px;
+    top: 388px;
+
+    background: #F2F3F5;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnSeis {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 188px;
+    top: 388px;
+
+    background: #F5F5F7;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnSiete {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 20px;
+    top: 304px;
+
+    background: #F3F4F6;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnOcho {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 104px;
+    top: 304px;
+
+    background: #F4F5F7;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+
+.btnNueve {
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 188px;
+    top: 304px;
+
+    background: #F4F5F7;
+    box-shadow: 4px 4px 5px #DEE0E3, -4px -4px 5px #FFFFFF;
+    border-radius: 30px;
+    border: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #627785;
+}
+.btnBorrar:hover{
+    background-color: #CDD5DB;
+}
+.btnPunto:hover{
+    background-color: #CDD5DB;
+}
+.btnCero:hover{
+    background-color: #CDD5DB;
+}
+.btnUno:hover{
+    background-color: #CDD5DB
+}
+.btnDos:hover{
+    background-color: #CDD5DB
+}
+.btnTres:hover{
+    background-color: #CDD5DB
+}
+.btnCuatro:hover{
+    background-color: #CDD5DB
+}
+.btnCinco:hover{
+    background-color: #CDD5DB
+}
+.btnSeis:hover{
+    background-color: #CDD5DB
+}
+.btnSiete:hover{
+    background-color: #CDD5DB
+}
+.btnOcho:hover{
+    background-color: #CDD5DB
+}
+.btnNueve:hover{
+    background-color: #CDD5DB;
+}
+.btnC:hover{
+    background-color: #DD922B;
+}
+.btnSumDivRes:hover{
+    background-color: #ddd3ba;
+}
+.btnPorcentaje:hover{
+    background-color: #ddd3ba;
+}
+
+.btnSum:hover{
+    background: #5563E6;
+    color: white;
+}
+.btnRest:hover{
+    background: #5563E6;
+    color: white;
+}
+.btnDiv:hover{
+    background: #5563E6;
+    color: white;
+}
+.btnMult:hover{
+    background: #5563E6;
+    color: white;
+}
+
+.btnSum:focus{
+    background: #5563E6;
+    color: white;
+}
+.btnRest:focus{
+    background: #5563E6;
+    color: white;
+}
+.btnDiv:focus{
+    background: #5563E6;
+    color: white;
+}
+.btnMult:focus{
+    background: #5563E6;
+    color: white;
+}
